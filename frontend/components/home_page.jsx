@@ -1,6 +1,5 @@
 import React from 'react';
 import CityIndexItem from './city_index_item';
-import LazyLoad from 'react-lazyload';
 import GoogleMapView from './google_map_view';
 
 class HomePage extends React.Component {
@@ -72,14 +71,15 @@ class HomePage extends React.Component {
 
     render () {
            return (
-                <LazyLoad height={200}>
-                    <div>
+            <div>
+                     <div>
                         {this.switchTypeButton()}
                     </div>
                     <div>
                         {this.whatToRender()}
                     </div>
-                </LazyLoad> 
+            </div>
+                   
             )
     }
 

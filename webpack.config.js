@@ -7,6 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
     filename: "bundle.js"
   },
+  mode: 'development',
   module: {
     rules: [
       {
@@ -15,13 +16,13 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['es2015', 'react']
+            presets: ["@babel/preset-env","@babel/preset-react"]
           }
         }
       }
     ]
   },
-  devtool: 'cheap-eval-source-map',
+  devtool: 'cheap-module-source-map',
   resolve: {
     extensions: [".js", ".jsx", "*", ".jpg"]
   }
