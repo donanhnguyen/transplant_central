@@ -4,8 +4,6 @@ TransplantCentral is a web application that allows you to review your favorite U
 
 ![alt text](https://media.giphy.com/media/fGR0LotJlmSk1R4jG8/giphy.gif)
 
-[Live Site](https://transplantcentral.herokuapp.com/#/)
-
 ### Features:
 
 Single-page web application built with `Ruby on Rails` RESTful API, with `Javascript (ES6)` and `React`, `Redux`, `PostgreSQL` database, `HTML/CSS` for styling, `Webpack`, and `NPM`.
