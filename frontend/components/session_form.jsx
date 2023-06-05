@@ -11,7 +11,7 @@ class SessionForm extends React.Component {
     }
 
     componentWillMount () {
-        this.props.errors = [];
+        // this.props.errors = [];
     }
 
     handleSubmit (event) {

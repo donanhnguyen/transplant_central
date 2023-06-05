@@ -24,13 +24,13 @@ class CityPostForm extends React.Component {
     }
 
     componentWillMount () {
-        this.props.postErrors = [];
+        // this.props.postErrors = [];
     }
 
     componentWillReceiveProps (nextProps) {
-        if (nextProps !== this.props) {
-            this.props.postErrors = [];
-        }
+        // if (nextProps !== this.props) {
+        //     this.props.postErrors = [];
+        // }
     }
 
     componentWillUnmount () {
@@ -62,7 +62,15 @@ class CityPostForm extends React.Component {
 
     submitPost (event) {
         event.preventDefault();
-        const createdPost = Object.assign({}, this.state);
+        const createdPost = {
+            subject: this.state.subject,
+            content: this.state.content,
+            rating: this.state.rating,
+            user_id: this.state.user_id,
+            city_id: this.state.city_id,
+            category_id: parseInt(this.state.category_id),
+        }
+        console.log(createdPost);
         this.props.createPost(createdPost);
         this.props.resetPostErrors();
         this.clearForm();
@@ -171,10 +179,10 @@ class CityPostForm extends React.Component {
                                 <br />
                             <select class='post-category-dropdown' ref='postCategory' onChange={this.update('category_id')}>
                                 <option value="" selected disabled hidden>Choose Category</option>
-                                <option value="1">Food</option>
-                                <option value="2">Culture</option>
-                                <option value="3">Nightlife</option>
-                                <option value="4">Economy</option>
+                                <option value={1}>Food</option>
+                                <option value={2}>Culture</option>
+                                <option value={3}>Nightlife</option>
+                                <option value={4}>Economy</option>
                             </select>
                                 <br /><br />
                             <label>Rating</label>
