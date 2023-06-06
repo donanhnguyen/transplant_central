@@ -23,16 +23,6 @@ class CityPostForm extends React.Component {
         }
     }
 
-    componentWillMount () {
-        // this.props.postErrors = [];
-    }
-
-    componentWillReceiveProps (nextProps) {
-        // if (nextProps !== this.props) {
-        //     this.props.postErrors = [];
-        // }
-    }
-
     componentWillUnmount () {
         this.props.resetPostErrors();
     }
