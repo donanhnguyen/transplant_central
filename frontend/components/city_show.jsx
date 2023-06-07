@@ -44,7 +44,7 @@ class CityShow extends React.Component {
             return (
                 <div class="city-main-content">
                     <div ref="cityPic" class='hide-this-shit city-profile-pic-container'>
-                        <Suspense fallback={<div>Loading bitch...</div>}>
+                        <Suspense fallback={<div>Loading...</div>}>
                             <CityProfilePic currentCity={currentCity} />
                         </Suspense>
                     </div>

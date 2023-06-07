@@ -60,6 +60,8 @@ class CityPostForm extends React.Component {
             city_id: this.state.city_id,
             category_id: parseInt(this.state.category_id),
         }
+
+        
         console.log(createdPost);
         this.props.createPost(createdPost);
         this.props.resetPostErrors();
