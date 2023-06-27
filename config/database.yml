@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: transplantcentral_production
   username: transplantcentral
   password: <%= ENV['TRANSPLANTCENTRAL_DATABASE_PASSWORD'] %>
