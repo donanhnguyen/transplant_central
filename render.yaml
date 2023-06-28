@@ -8,8 +8,7 @@ services:
     name: transplantcentral
     env: ruby
     buildCommand: "./bin/render-build.sh"
-    startCommand: "bundle exec rails s"
-    # startCommand: "bundle exec puma -C config/puma.rb"
+    startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
