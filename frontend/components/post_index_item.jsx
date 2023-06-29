@@ -22,7 +22,7 @@ class PostIndexItem extends React.Component {
     userShowLink () {
         const {post} = this.props;
         return (
-            <p>{post.username}</p>
+            <span>{post.username}</span>
         )
     }
 
@@ -102,7 +102,7 @@ class PostIndexItem extends React.Component {
             return (
                 <div class='post-index-item'>
                     <p class='post-stamp'>{this.timeStamp()}</p>
-                    <p class='post-stamp'>Posted By: {this.userShowLink()}</p>
+                    <span class='post-stamp'>Posted By: {this.userShowLink()}</span>
 
                     <ul class='post-star-rating-list' ref='postRating'>
                         <li></li>

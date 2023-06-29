@@ -1,57 +1,83 @@
-### TRANSPLANTCENTRAL
+# TRANSPLANTCENTRAL
 
 TransplantCentral is a web application that allows you to review your favorite US metropolitan cities based of a variety of categories and share your living/travel experiences.
 
-![alt text](https://media.giphy.com/media/fGR0LotJlmSk1R4jG8/giphy.gif)
+Each user can create an account and then click on their desired city, review each of the 4 categories, and post a review.
 
-### Features:
+<h1>Languages and tools used:</h1>
 
-Single-page web application built with `Ruby on Rails` RESTful API, with `Javascript (ES6)` and `React`, `Redux`, `PostgreSQL` database, `HTML/CSS` for styling, `Webpack`, and `NPM`.
-
-1. Login/SignUp Page: User sign up/log in/log out functionality and secure user authentication using `Rails'` `BCrypt` Gem.
-
-2. Fully responsive desktop page design coded from scratch with HTML/CSS without Bootstrap.
-
-3. CRUD Features:
-- Create a review using `Rails controller` action and `AJAX` request mixed with `React`, star highlight rating for intuitive and creative user experience. 
-- Read a review by using `Redux`'s state manager to pass down info from database and render it to UI using `React`.
-- Update a review with `Rails` controller and `AJAX` request.
-- Delete review with `Rails` controller action.
-
-### Code Highlights:
-
-### Star Hover UI Rating
-
-<div>
-    <img src="https://media.giphy.com/media/7OWL4RSNanqyw49MEK/giphy.gif" width="300px" height="400px"</img> 
+<div display=flex>
+  <img src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg' width=40 height=40/>
+  <img src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/react/react-original-wordmark.svg' width=40 height=40/>
+  <img src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/ruby/ruby-original-wordmark.svg' width=40 height=40/>
+  <img src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/rails/rails-original-wordmark.svg' width=40 height=40/>
+  <img src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/html5/html5-original-wordmark.svg' width=40 height=40/>
+  <img src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-original-wordmark.svg' width=40 height=40/>
+  <img src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/postgresql/postgresql-original-wordmark.svg' width=40 height=40/>
+  <img src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/webpack/webpack-original-wordmark.svg' width=40 height=40/>
+  <img src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/git/git-original-wordmark.svg' width=40 height=40/>
+  <img src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/redux/redux-original.svg' width=40 height=40/>
 </div>
 
-`Vanilla JS` and `DOM Manipulation` used to implement Star UI rating system,
+<br>
+<h1>How to Run Project Locally:</h1>
 
-<div>
-    <img src="/screenshots/screen7.png" width="560px" height="320px"</img> 
-</div>
+1. Git clone the project using:
 
-Clicking on a star will highlight all the previous stars, and stay highlighted unless you click on another star, and change the `React` component's local state.
+`git clone https://github.com/thedonwind69/transplant_central.git`
 
-Hovering over a star with highlight all the previous stars of the one that is currently being hovered over...
+2. Then, CD into project:
 
-<div>
-    <img src="/screenshots/screen9.png" width="560px" height="320px"</img> 
-</div>
+`cd transplant_central`
 
-And then hovering away from a star with highlight all the previous stars of the one that is currently been selected. If no selection has been made yet, all stars are unhighlighted.
+3. Install homebrew in order to install Ruby:
 
-### City Highlights
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+`
 
-<div>
-    <img src="/screenshots/screen12.png" width="400px" height="400px"</img> 
-</div>
+4. Check if homebrew is installed by running: 
 
-Data about all the cities is passed from container component using `Redux` state. Highest rated city, lowest rated city, and most reviewed city are calculated with `Vanilla Javascript`.
+`brew --version`
 
-<div>
-    <img src="/screenshots/screen13.png" width="600px" height="370px"</img> 
-</div>
+5. Install ruby using rbenv:
 
-`React` is used to create UI component with a link directing user to that city's show page, using `React`'s `Link` and `Router` features. 
+`rbenv install 3.2.0`
+
+6. Install bundles:
+
+`bundle install`
+
+7. Install NPM and Javascript packages:
+
+`npm install`
+
+8. Create rails database:
+
+`bundle e rails db:setup`
+
+9. Migrate:
+
+`bundle e rails db:migrate`
+
+10. Check if postgres is installed by running: 
+
+`postgres -V`
+
+11. If not, then run: 
+
+`brew install postgresql`
+
+12. Start PostgreSQL:
+
+`brew services start postgresql`
+
+13. Run the rails server:
+
+`bundle e rails s`
+
+14. When the server is running, try to access http://localhost:3000, and it should work in many cases!
+
+
+
+
+
