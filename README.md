@@ -4,6 +4,10 @@ TransplantCentral is a web application that allows you to review your favorite U
 
 Each user can create an account and then click on their desired city, review each of the 4 categories, and post a review.
 
+<video width="320" height="240" controls>
+  <source src="./screenshots/video.MP4" type="video/mp4">
+</video>
+
 <h1>Languages and tools used:</h1>
 
 <div display=flex>
