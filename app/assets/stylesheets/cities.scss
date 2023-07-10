@@ -246,6 +246,13 @@
     background-image: image-url('WashingtonDCPage2.jpg');
 }
 //City Pics End ------->
+
+.city-main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 57vh;
+}
 .city-profile-pic-container {
     width: 100%;
 }
@@ -294,6 +301,12 @@
     }
 }
 //end
+.browse-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5vh;    
+}
 .home-page-container {
     margin: auto;
     text-align: center;

@@ -7,17 +7,26 @@ class SessionForm extends React.Component {
         this.state = {
             username: "",
             password: "",
+            confirmPassword: "",
+            erorrMessage: ""
           };
-    }
-
-    componentWillMount () {
-        // this.props.errors = [];
     }
 
     handleSubmit (event) {
         event.preventDefault();
-        const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+
+        if (this.props.formType === "signup" && (this.state.password !== this.state.confirmPassword)) {
+            this.setState({errorMessage: "Passwords don't match."})
+        } else {
+            const user = {
+                username: this.state.username,
+                password: this.state.password
+            }
+            this.props.processForm(user);
+        }
+
+        // const user = Object.assign({}, this.state);
+        
     }
 
     navLink () {
@@ -38,6 +47,7 @@ class SessionForm extends React.Component {
 
     renderErrors() {
         if (this.props.errors.length > 0) {
+
             return (
                 <ul>
                     {this.props.errors.map((error, i) => (
@@ -60,6 +70,8 @@ class SessionForm extends React.Component {
 
                     {this.renderErrors()}
 
+                    <li class='error-message'>{this.state.errorMessage}</li>
+
                     <form onSubmit={ this.handleSubmit.bind(this) }>
                         <label>Username</label>
                         <input type='text' value={this.state.username} onChange={this.update('username')} />
@@ -70,6 +82,17 @@ class SessionForm extends React.Component {
                         <input type='password' value={this.state.password} onChange={this.update('password')}/>
 
                             <br /><br />
+
+                            {this.props.formType === "signup" ?
+
+                            <>
+                                <label>Confirm Password</label>
+                                <input type='password' value={this.state.confirmPassword} onChange={this.update('confirmPassword')}/>
+                                <br /><br />
+                            </>
+                            :
+                        
+                            ""}
 
                         <input class='session-submit-button' type="submit" value="Submit" />
                     </form>

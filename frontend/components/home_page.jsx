@@ -71,8 +71,8 @@ class HomePage extends React.Component {
 
     render () {
            return (
-            <div>
-                     <div>
+            <div class='browse-page-container'>
+                     <div style={{marginBottom: '10px'}}>
                         {this.switchTypeButton()}
                     </div>
                     <div>

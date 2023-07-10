@@ -3,13 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .session-form-container {
-   display: flex; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 87vh;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
 }
 .session-form {
     margin: auto;
-    width: 900px;
     text-align: center;
-    padding: 100px;
+    padding: 80px;
     font-size: 20px;
     color: white;
     background-size: 100% 100%;

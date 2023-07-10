@@ -23,7 +23,7 @@ class Greeting extends React.Component {
 
     render () {
         return (
-            <div>
+            <div class="centered-container">
                 {this.currentUserHeading()}
                 <div class="greeting-container">
                     <h1>TransplantCentral</h1>
