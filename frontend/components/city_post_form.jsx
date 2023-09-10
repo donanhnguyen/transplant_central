@@ -168,10 +168,10 @@ class CityPostForm extends React.Component {
                                 <br />
                             <select class='post-category-dropdown' ref='postCategory' onChange={this.update('category_id')}>
                                 <option value="" selected disabled hidden>Choose Category</option>
-                                <option value={1}>Food</option>
-                                <option value={2}>Culture</option>
-                                <option value={3}>Nightlife</option>
-                                <option value={4}>Economy</option>
+                                <option value={9}>Food</option>
+                                <option value={10}>Culture</option>
+                                <option value={11}>Nightlife</option>
+                                <option value={12}>Economy</option>
                             </select>
                                 <br /><br />
                             <label>Rating</label>
